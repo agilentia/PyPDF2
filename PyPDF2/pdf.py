@@ -217,7 +217,7 @@ class PdfFileWriter(object):
             rev = 2
             keylen = 40 / 8
         # permit everything:
-        P = -1
+        P = 27
         O = ByteStringObject(_alg33(owner_pwd, user_pwd, rev, keylen))
         ID_1 = ByteStringObject(md5(repr(time.time())).digest())
         ID_2 = ByteStringObject(md5(repr(random.random())).digest())
